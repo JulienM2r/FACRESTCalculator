@@ -20,21 +20,7 @@ public class Controller {
 	
 	private MultiplyService multiply;
 	
-	
-	@PostMapping("/plus")
-	public ResponseEntity<String> plus( @RequestBody String entree) {
-		
-		int result;
-		JSONObject entreeJSON = new JSONObject(entree);
-		int nba = entreeJSON.getInt('nba');
-		result = multiply.plus(nba, nbb);
-		String response = Integer.toString(result);
-		
-		
-		return new ResponseEntity<String>(response, HttpStatus.OK);
-		
-	}
-	
+
 	@PostMapping("/multiply")
 	public ResponseEntity<String> multiply( @RequestBody int nba, @RequestBody int nbb) throws IOException{
 		
@@ -48,29 +34,7 @@ public class Controller {
 	}
 
 	
-	@PostMapping("/devide")
-	public ResponseEntity<String> divide( @RequestBody int nba, @RequestBody int nbb) throws IOException{
-		
-		int result;
-		
-		result = multiply.divide(nba, nbb);
-		String response = Integer.toString(result);
-		
-		return new ResponseEntity<String>(response, HttpStatus.OK);
-		
-	}
 	
-	@PostMapping("/moin")
-	public ResponseEntity<String> moin( @RequestBody int nba, @RequestBody int nbb) throws IOException{
-		
-		int result;
-		
-		result = multiply.moins(nba, nbb);
-		String response = Integer.toString(result);
-		
-		return new ResponseEntity<String>(response, HttpStatus.OK);
-		
-	}
 	
 	
 
