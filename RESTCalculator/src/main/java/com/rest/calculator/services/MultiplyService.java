@@ -1,8 +1,16 @@
 package com.rest.calculator.services;
 
-public class MultiplyService {
+import java.util.Scanner;
 
-	public int multiply(int a, int b) {
+public class MultiplyService {
+	
+	Scanner sc = new Scanner(System.in);
+
+	public double multiply(double a, double b) {
         return a * b;
     }
+	
+	
+	
+	
 }
