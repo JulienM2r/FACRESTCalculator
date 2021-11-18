@@ -12,5 +12,9 @@ public class additionservice {
 	public int additionint(int a, int b) {
         return a + b;
 	}
+	
+	public double sinus(double a) {
+		return Math.sin(a);
+	}
 
 }
