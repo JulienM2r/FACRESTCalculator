@@ -1,7 +1,7 @@
 package com.rest.calculator.services;
 
 public class MultiplyService {
-
+	
 	public double multiply(double a, double b) {
         return a * b;
     }
