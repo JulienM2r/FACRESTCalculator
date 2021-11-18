@@ -11,8 +11,10 @@ import org.junit.jupiter.api.Test;
 import com.rest.calculator.services.MultiplyService;
 
 public class MultiplyServiceTest {
-
-
+	
+	double a, b;
+	String operateur = ""; 
+	
     MultiplyService multiply;
 
     @BeforeEach                                         
@@ -33,4 +35,41 @@ public class MultiplyServiceTest {
         assertEquals(0, multiply.multiply(0, 5), "Multiple with zero should be zero");
         assertEquals(0, multiply.multiply(5, 0), "Multiple with zero should be zero");
     }
+
+    
+    @Test
+    void testMultiplay() throws Exception{
+    	double somme;
+      if(operateur.equals("+")){
+    	try{
+    	  somme = a + b; 
+    	}catch(Exception e) {
+          System.out.println(e);
+        }
+      }
+    	
+      if(operateur.equals("-")){
+    	try{
+        	  somme = a - b; 
+        }catch(Exception e) {
+           System.out.println(e);
+        }
+      }
+      if(operateur.equals("*")){
+    	try{
+        	 somme = a * b; 
+        }catch(Exception e) {
+           System.out.println(e);
+        }
+      }
+      if(operateur.equals("/")){
+    	  try{
+        	  somme = a / b; 
+    	  }catch(Exception e) {
+              System.out.println(e);
+          }
+      }
+    
+    } 
 }
+  
