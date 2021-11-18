@@ -3,19 +3,26 @@ package com.rest.calculator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
+import com.rest.calculator.services.DivisionService;
 import com.rest.calculator.services.MultiplyService;
+import com.rest.calculator.services.additionservice;
 
 public class MultiplyServiceTest {
 	
-	double a, b;
-	String operateur = ""; 
+	int a, b;
+	String operateur = "+"; 
 	
     MultiplyService multiply;
+    additionservice addition;
+    DivisionService division;
+    
+    
 
     @BeforeEach                                         
     void setUp() {
@@ -37,12 +44,20 @@ public class MultiplyServiceTest {
     }
 
     
+   
     @Test
+    void testMultiplay1() throws Exception{
+    	assertEquals(0,addition.additionint(a, b));
+    }
+    
+    
+	@Test
     void testMultiplay() throws Exception{
-    	double somme;
+    	int somme;
       if(operateur.equals("+")){
     	try{
-    	  somme = a + b; 
+    	  somme = a + b;
+    	  System.out.println(somme);
     	}catch(Exception e) {
           System.out.println(e);
         }
@@ -50,21 +65,40 @@ public class MultiplyServiceTest {
     	
       if(operateur.equals("-")){
     	try{
-        	  somme = a - b; 
+    	  somme = a - b;
+    	  System.out.println(somme);
         }catch(Exception e) {
            System.out.println(e);
         }
       }
       if(operateur.equals("*")){
     	try{
-        	 somme = a * b; 
+    	 somme = a * b;
+    	 System.out.println(somme);
         }catch(Exception e) {
            System.out.println(e);
         }
       }
       if(operateur.equals("/")){
     	  try{
-        	  somme = a / b; 
+	    	  somme = a / b;
+	    	  System.out.println(somme);
+    	  }catch(Exception e) {
+              System.out.println(e);
+          }
+      }
+      if(operateur.equals("")){
+    	  try{
+	    	  somme = a;
+	    	  System.out.println(somme);
+    	  }catch(Exception e) {
+              System.out.println(e);
+          }
+      }
+      if(operateur.equals("")){
+    	  try{
+	    	  somme = 0;
+	    	  System.out.println(somme);
     	  }catch(Exception e) {
               System.out.println(e);
           }
