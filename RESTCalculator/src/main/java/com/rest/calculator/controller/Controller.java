@@ -22,12 +22,15 @@ public class Controller {
 	
 
 	@PostMapping("/multiply")
-	public ResponseEntity<String> multiply( @RequestBody int nba, @RequestBody int nbb) throws IOException{
+	public ResponseEntity<String> multiply( @RequestBody String request) throws IOException{
 		
-		int result;
+		double result;
+		JSONObject requestJSON = new JSONObject(request);
+		double nba = requestJSON.getDouble("nba");
+		double nbb = requestJSON.getDouble("nbb");
 		
-		result = multiply.multiply(nba, nbb);
-		String response = Integer.toString(result);
+		result =  multiply.multiply(nba, nbb);
+		String response = Double.toString(result);
 		
 		return new ResponseEntity<String>(response, HttpStatus.OK);
 		
