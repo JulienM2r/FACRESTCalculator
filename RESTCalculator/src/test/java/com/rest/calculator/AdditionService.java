@@ -24,7 +24,7 @@ public class AdditionService {
     @Test                                               
     @DisplayName("Simple add should work")   
     void testAddition() {
-        assertEquals(0, add.additiondouble(10, 10),"Regular multiplication should work");  
+        assertEquals(20, add.additiondouble(10, 10),"Regular multiplication should work");  
         assertEquals(100, add.additiondouble(50, 50),"Regular multiplication should work");  
     }
 
