@@ -32,6 +32,12 @@
 			<artifactId>spring-restdocs-mockmvc</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+		    <groupId>org.json</groupId>
+		    <artifactId>json</artifactId>
+		    <version>20210307</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-library -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -44,6 +50,11 @@
             <version>5.7.2</version>
             <scope>test</scope><!--$NO-MVN-MAN-VER$-->
         </dependency>
+        <!--Pour Beans-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
