@@ -2,7 +2,15 @@ package com.rest.calculator.services;
 
 public class MultiplyService {
 
-	public int multiply(int a, int b) {
+	public double multiply(double a, double b) {
         return a * b;
     }
+	
+	public double multiply(double a) {
+		return a;
+	}
+	
+	public double multiply() {
+		return 0;
+	}
 }
