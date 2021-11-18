@@ -18,7 +18,7 @@ import com.rest.calculator.services.MultiplyService;
 @RestController
 public class Controller {
 	
-	private MultiplyService multiply;
+	private MultiplyService multiply = new MultiplyService();
 	
 
 	@PostMapping("/multiply")
