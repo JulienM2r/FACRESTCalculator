@@ -2,7 +2,10 @@ package com.rest.calculator.services;
 
 public class SubstractService<T> {
 
-    public int substract(int a, int b) {
+    public double substract(double a, double b) {
+
         return a - b;
+
     }
+
 }
